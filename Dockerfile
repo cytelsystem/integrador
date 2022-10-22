@@ -1,6 +1,6 @@
 FROM adoptopenjdk/openjdk16:ubi
 
-ARG JAR_FILE=target/Odontologica-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=target/booking-0.0.1-SNAPSHOT.jar
 
 COPY ${JAR_FILE} app.jar
 

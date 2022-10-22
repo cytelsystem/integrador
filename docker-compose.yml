@@ -1,8 +1,8 @@
 version: "3.1"
 services:
   springboot-app:
-    container_name: OdontologicaApp
-    image: springbooot-app
+    container_name: bookingApp
+    image: springboot-app
     build: .
     ports:
       - 8080:8080
@@ -16,12 +16,12 @@ services:
       - mysqldb
   mysqldb:
     image: mysql:5.7
-    container_name: OdontologicaDB
+    container_name: bookingDB
     restart: always
     networks:
       - springmysql-net
     environment:
-      MYSQL_DATABASE: Odontologica
+      MYSQL_DATABASE: bookingDB
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: sa
       MYSQL_PASSWORD: 1234
